@@ -247,7 +247,6 @@ void Graph<T>::bellmanFordShortestPath(const T &orig) {
         for (auto edge : v->adj) {
             Vertex<T>* dest = edge.dest;
             if (dest->dist > (v->dist + edge.weight)) {
-                cout<<"Negative Cycles"<<endl;
                 break;
             }
         }
